@@ -1,29 +1,30 @@
 // AddTwoNumbers.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
- struct ListNode {
-     int val;
-     ListNode *next;
-     ListNode() : val(0), next(nullptr) {}
-     ListNode(int x) : val(x), next(nullptr) {}
-     ListNode(int x, ListNode *next) : val(x), next(next) {}
- };
+struct ListNode {
+	int val;
+	ListNode* next;
+	ListNode() : val(0), next(nullptr) {}
+	ListNode(int x) : val(x), next(nullptr) {}
+	ListNode(int x, ListNode* next) : val(x), next(next) {}
+};
 
 #include <iostream>
 
- ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
+ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+
+	return l3;
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
-}
+	//ListNode* lp = new ListNode(1);
+	////lp = lp->next;
 
-ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-    int carry = 0;
-    ListNode* l = l1;
-    ListNode* r = l2;
-    
-    while (l != NULL && r != NULL) {
+	//lp->next = new ListNode(22);
 
-    }
+	//ListNode* next = lp->next;
+	//next->next = new ListNode(33);
+
+	//addTwoNumbers()
 }
