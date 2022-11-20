@@ -13,18 +13,41 @@ struct ListNode {
 
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 
+	int carry = 0;
+	ListNode* l3 = NULL;
+	ListNode* next = l3;
+	while (l1 != nullptr || l2 != nullptr) {
+		int value = carry;
+		if (l1 != nullptr) {
+			value += l1->val;
+		}
+		if (l2 != nullptr)
+		{
+			value += l2->val;
+		}
+		if (value >= 10) {
+			carry = 1;
+			value = value - 10;
+		}
+		else {
+			carry = 0;
+		}
+		if (next == nullptr) {
+			next = new ListNode(value);
+		}
+		else {
+			next->next = new ListNode(value);
+			next->next = next->next->next;
+		}
+		l1 = l1->next;
+		l2 = l2->next;
+	}
 	return l3;
 }
 
 int main()
 {
-	//ListNode* lp = new ListNode(1);
-	////lp = lp->next;
-
-	//lp->next = new ListNode(22);
-
-	//ListNode* next = lp->next;
-	//next->next = new ListNode(33);
-
-	//addTwoNumbers()
+	ListNode* l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
+	ListNode* l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
+	addTwoNumbers(l1, l2);
 }
